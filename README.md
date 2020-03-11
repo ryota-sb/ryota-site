@@ -1,24 +1,13 @@
-# ryota-site
+[Ryota Site]
 
-## Project setup
-```
-npm install
-```
+自己紹介と制作物を掲載したWebサイト
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+AWSのAmplifyを使ってサーバーレスでデプロイしています
 
-### Compiles and minifies for production
-```
-npm run build
-```
+・HTML CSS
+・javascript
+・Vue.js
 
-### Lints and fixes files
-```
-npm run lint
-```
+[お問い合わせフォームの処理]
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+API Gateway →　Lambda →　SES
