@@ -4,10 +4,8 @@
       <h1>Portfolio</h1>
       <p>- 制作物 -</p>
     </div>
-    <h2>TODO App</h2>
-    <p>- 準備中 -</p>
-    <h2>BookShelf</h2>
-    <a href="http://ec2-18-179-218-147.ap-northeast-1.compute.amazonaws.com:3000">アプリへ移動</a>
+    <h2>BookShelf(書籍記録アプリ)</h2>
+    <a href="http://app-bookshelf.site:3000">BookShelfへ</a>
   </div>
 </template>
 
