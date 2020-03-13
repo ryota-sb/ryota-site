@@ -4,8 +4,9 @@
       <h1>Portfolio</h1>
       <p>- 制作物 -</p>
     </div>
-    <h2>BookShelf(書籍記録アプリ)</h2>
-    <a href="http://app-bookshelf.site:3000">BookShelfへ</a>
+    <h2>BookShelf</h2>
+    <p>- 書籍アプリ -</p>
+    <a href="http://app-bookshelf.site">BookShelfへ</a>
   </div>
 </template>
 
