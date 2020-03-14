@@ -44,6 +44,10 @@ export default {
   .contact-page {
     .contact-page-title {
       margin-bottom: 30px;
+      h1 {
+        color: white;
+        -webkit-text-stroke: 1px black;
+      }
     }
     form {
       margin: 0 auto;

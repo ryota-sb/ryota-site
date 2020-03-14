@@ -13,16 +13,15 @@ export default {
 </script>
 
 <style lang="scss">
+  $skyblue: #7CC6CF;
   .top-page {
     margin-top: 160px;
     width: 100%;
     .top-page-title {
       h1 {
         font-size: 60px;
-        color: skyblue;
-        // background: -webkit-linear-gradient(0deg, rgb(135, 206, 235), rgb(154, 205, 50));
-        // background-clip: text;
-        // -webkit-text-fill-color: rgba(0,0,0,0);
+        color: white;
+        -webkit-text-stroke:1px $skyblue;
       }
     }
   }

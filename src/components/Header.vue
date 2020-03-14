@@ -15,10 +15,13 @@
 </script>
 
 <style lang="scss">
+  $light-skyblue: #7CC6CF;
+  $skyblue: #00B6C4;
   nav {
     height: 50px;
     line-height: 50px;
-    box-shadow: 0.5px 0.5px 3px 0.5px black;
+    background-color: $light-skyblue;
+    box-shadow: 0 0 2px $skyblue;
     ul {
       float: right;
       li {
@@ -30,9 +33,10 @@
           height: 50px;
           text-decoration: none;
           font-weight: bold;
-          color: black;
+          color: white;
           &:hover {
-            border-bottom: 3px solid skyblue;
+            background-color: $skyblue;
+            color: white;
           }
         }
       }

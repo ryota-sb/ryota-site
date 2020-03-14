@@ -2,7 +2,7 @@
   <div class="skill-page">
     <div class="skill-page-title">
       <h1>Skill</h1>
-      <p>- 使える言語、技術 -</p>
+      <p>- 言語、技術 -</p>
     </div>
     <ul>
       <li><p><span class="html">HTML</span><span class="and">&</span><span class="css">CSS</span></p></li>
@@ -24,6 +24,10 @@ export default {
 <style lang="scss">
   .skill-page {
     .skill-page-title {
+      h1 {
+        color: white;
+        -webkit-text-stroke: 1px black;
+      }
       p {
         margin-bottom: 30px;
       }

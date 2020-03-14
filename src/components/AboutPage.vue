@@ -5,7 +5,7 @@
       <p>- 自己紹介 -</p>
     </div>
     <img src="@/assets/ryota.jpg" alt="Ryotaの写真" width="150px" height="150px" />
-    <p class="last-name">松井 亮太(25)</p>
+    <p class="full-name">松井 亮太(25)</p>
     <div class="about-me">
       <p>1994年12月6日生まれ。</p>
       <p>静岡産業大学情報学部を卒業。</p>
@@ -26,11 +26,17 @@ export default {
 
 <style lang="scss">
   .about-page {
+    .about-page-title {
+      h1 {
+        color: white;
+        -webkit-text-stroke:1px black
+      }
+    }
     img {
       margin: 20px 0;
       border-radius: 50%;
     }
-    .last-name {
+    .full-name {
       margin-bottom: 20px;
       font-size: 18px;
       font-weight: bold;
