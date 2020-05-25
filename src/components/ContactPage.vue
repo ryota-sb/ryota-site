@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'Contact',
+  name: 'contact-page',
   data() {
     return {
       name: '',
@@ -30,14 +30,8 @@ export default {
         email: this.email,
         content: this.content
       }
-      const headers = {
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-          "Access-Control-Allow-Origin": "*",
-        }
-      }
-      const entryPointUri = 'https://7rpd3dcicb.execute-api.ap-northeast-1.amazonaws.com/v1/sendmail'
-      this.$axios.post(entryPointUri, params, headers).then(response => {
+      const apiUrl = 'https://7rpd3dcicb.execute-api.ap-northeast-1.amazonaws.com/v1/sendmail'
+      this.$axios.post(apiUrl, params).then(response => {
         console.log(response)
       }).catch(error => {
         console.log(error)
