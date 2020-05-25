@@ -11,9 +11,6 @@
   </nav>
 </template>
 
-<script>
-</script>
-
 <style lang="scss">
   $light-skyblue: #7CC6CF;
   $skyblue: #00B6C4;

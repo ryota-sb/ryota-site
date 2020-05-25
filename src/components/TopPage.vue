@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  title: 'Top'
+  name: 'top-page'
 }
 </script>
 

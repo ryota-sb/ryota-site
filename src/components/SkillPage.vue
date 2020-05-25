@@ -55,7 +55,7 @@
 
 <script>
 export default {
-  title: 'Skill'
+  name: 'skill-page'
 }
 </script>
 
