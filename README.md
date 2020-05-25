@@ -2,10 +2,8 @@
 
 自己紹介と制作物を掲載したWebサイト
 
-AWSのAmplifyを使ってサーバーレスでデプロイしています
+AWSのAmplifyを使ってデプロイしています
 
-・HTML CSS
-・javascript
 ・Vue.js
 
 [お問い合わせフォームの処理]
