@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  title: 'Contact',
+  name: 'Contact',
   data() {
     return {
       name: '',
@@ -25,16 +25,23 @@ export default {
   },
   methods: {
     send() {
-      this.axios.post('https://h4dc7a15ib.execute-api.us-east-1.amazonaws.com/v1/send',
-      {
-        name: "Ryota",
-        email: "sample@email",
-        content: "sample text"
-      }).then((response) => {
-        alert(response)
-      }).catch((error) => (
-        alert(error)
-      ))
+      const params = {
+        name: this.name,
+        email: this.email,
+        content: this.content
+      }
+      const headers = {
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+          "Access-Control-Allow-Origin": "*",
+        }
+      }
+      const entryPointUri = 'https://7rpd3dcicb.execute-api.ap-northeast-1.amazonaws.com/v1/sendmail'
+      this.$axios.post(entryPointUri, params, headers).then(response => {
+        console.log(response)
+      }).catch(error => {
+        console.log(error)
+      })
     }
   }
 }

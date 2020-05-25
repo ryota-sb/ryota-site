@@ -4,14 +4,52 @@
       <h1>Skill</h1>
       <p>- 言語、技術 -</p>
     </div>
-    <ul>
-      <li><p><span class="html">HTML</span><span class="and">&</span><span class="css">CSS</span></p></li>
-      <li><p class="js">javascript</p></li>
-      <li><p class="ruby">Ruby</p></li>
-      <li><p class="rails">Ruby on Rails</p></li>
-      <li><p class="vue">Vue.js</p></li>
-      <li><p class="git">git</p></li>
-    </ul>
+    <div class="skill-index">
+      <div class="group-frontend">
+        <div class="skill-title">
+          <h2><span>&lt;</span> フロントエンド <span>/</span><span>&gt;</span></h2>
+        </div>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="group-backend">
+        <div class="skill-title">
+          <h2><span>&lt;</span> バックエンド <span>/</span><span>&gt;</span></h2>
+        </div>
+        <ul>
+          <li>Ruby</li>
+        </ul>
+      </div>
+      <div class="group-framework">
+        <div class="skill-title">
+          <h2><span>&lt;</span> フレームワーク <span>/</span><span>&gt;</span></h2>
+        </div>
+        <ul>
+          <li>Ruby on Rails</li>
+          <li>Vue.js</li>
+        </ul>
+      </div>
+      <div class="group-version-control">
+        <div class="skill-title">
+          <h2><span>&lt;</span> バージョン管理 <span>/</span><span>&gt;</span></h2>
+        </div>
+        <ul>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <div class="group-aws">
+        <div class="skill-title">
+          <h2><span>&lt;</span> AWS <span>/</span><span>&gt;</span></h2>
+        </div>
+        <ul>
+          <li>EC2</li>
+          <li>Amplify</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,54 +60,52 @@ export default {
 </script>
 
 <style lang="scss">
+
+  $light-skyblue: #7CC6CF;
+  $skyblue: #00B6C4;
+
   .skill-page {
+    width: 500px;
+    margin: 0 auto;
     .skill-page-title {
+      margin-bottom: 20px;
       h1 {
         color: white;
         -webkit-text-stroke: 1px black;
       }
-      p {
-        margin-bottom: 30px;
-      }
     }
-    ul {
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      li {
-        margin: 20px;
-        width: 35%;
-        max-width: 100%;
-        height: 100px;
-        line-height: 100px;
-        box-shadow: 0.5px 0.5px 3px 0.5px gray;
-        p {
-          font-size: 24px;
-          .html {
-            color: skyblue;
-          }
-          .css {
-            color: orange;
-          }
-          .and {
-            padding: 0 5px;
+    .skill-index {
+      position: relative;
+      top: -19px;
+      .group-frontend,
+      .group-backend,
+      .group-framework,
+      .group-version-control,
+      .group-aws {
+        margin-bottom: 10px;
+        .skill-title {
+          display: inline-block;
+          position: relative;
+          top: 19px;
+          background-color: white;
+          h2 {
+            span {
+              color: purple;
+            }
           }
         }
-        .js {
-          color: rgb(255, 217, 0);
-        }
-        .ruby {
-          color: red;
-        }
-        .vue{
-          color: lightgreen;
-        }
-        .rails {
-          color: red;
-        }
-        .git {
-          color: orange;
+        ul {
+          padding: 10px;
+          //border: 1px solid black;
+          //border-radius: 5px;
+          
+          li {
+            margin: 20px auto;
+            padding: 10px;
+            width: 150px;
+            border: 1px solid black;
+            border-radius: 50px;
+          }
         }
       }
     }
@@ -77,15 +113,8 @@ export default {
 
   @media screen and (-webkit-min-device-pixel-ratio:0) and (max-width: 420px) {
     .skill-page {
-      ul {
-        margin: 0 auto;
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        li {
-          width: 80%;
-        }
-      }
+      width: auto;
+      margin: 0 20px;
     }
   }
 </style>
