@@ -7,32 +7,10 @@
 
     <!-- BookShelf -->
     <div class="bookshelf">
-      <div class="app-image-pc">
-        <ul>
-          <li v-if="isActive == 1">
-            <img src="@/assets/imgs/bookshelf_top_page.png">
-          </li>
-          <li v-else-if="isActive == 2">
-            <img src="@/assets/imgs/bookshelf_user_page.png">
-          </li>
-        </ul>
-      </div>
 
-      <div class="app-image-mobile">
-        <ul>
-          <li v-if="isActive == 1">
-            <img src="@/assets/imgs/bookshelf_top_page_mobile.jpg">
-          </li>
-          <li v-else-if="isActive == 2">
-            <img src="@/assets/imgs/bookshelf_user_page_mobile.jpg">
-          </li>
-        </ul>
-      </div>
-
-      <!-- 画像選択 -->
-      <div class="tabs">
-        <input class="select-button" type="radio" value="1" v-model="isActive">
-        <input class="select-button" type="radio" value="2" v-model="isActive">
+      <!-- 画像 -->
+      <div class="bookshelf_image">
+        <portfolio-page-image />
       </div>
 
       <!-- アプリ概要 -->
@@ -115,12 +93,9 @@
 </template>
 
 <script>
+import PortfolioPageImage from '../components/PortfolioPageImage.vue'
 export default {
-  data() {
-    return {
-      isActive: 1
-    }
-  }
+  components: { PortfolioPageImage }
 }
 </script>
 
@@ -142,47 +117,11 @@ export default {
     }
     .bookshelf,
     .ryota-site {
-      .app-image-pc > ul > li {
-        img {
-          border: 1px solid black;
-        }
+      .bookshelf_image {
+        margin: 20px 0;
       }
-      .app-image-mobile {
+      .mobile {
         display: none;
-      }
-      .tabs {
-        margin-bottom: 20px;
-        .select-button {
-          position: relative;
-          margin:5px;
-          width: 20px;
-          height: 20px;
-          cursor: pointer;
-        }
-        .select-button:before,
-        .select-button:after {
-          position: absolute; 
-          content: "";
-          border-radius: 50%;
-          transition: 0.7s;
-        }
-        .select-button::before {
-          z-index: 1;
-          top: 1px;
-          left: 1px;
-          width: 18px;
-          height: 18px;
-          background-color: white;
-        }
-        .select-button::after {
-          z-index: 0;
-          width: 20px;
-          height: 20px;
-          background-color: lightgray;
-        }
-        .select-button:checked:before {
-          transform: scale(0, 0);
-        }
       }
       a {
         margin: 10px auto;
@@ -222,14 +161,14 @@ export default {
       width: auto;
       .bookshelf,
       .ryota-site {
-        .app-image-pc {
+        .bookshelf_image {
+          margin: 20px;
+        }
+        .pc {
           display: none;
         }
-        .app-image-mobile {
+        .mobile {
           display: inline-block;
-          ul > li > img {
-            border: 1px solid black;
-          }
         }
         .app-function,
         .app-description,
