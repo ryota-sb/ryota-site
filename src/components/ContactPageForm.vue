@@ -1,6 +1,11 @@
 <template>
   <v-app>
     <v-container>
+      <v-row justify="center" v-if="sent">
+        <v-col cols="10" md="6">
+          <contact-page-form-alert />
+        </v-col>
+      </v-row>
       <v-row justify="center">
         <v-col cols="10" md="6">
           <v-form
@@ -14,7 +19,6 @@
               :rules="nameRules"
               :counter="10"
               outlined
-              dense
             >
             </v-text-field>
             <v-text-field
@@ -23,7 +27,6 @@
               color="#7CC6CF"
               :rules="emailRules"
               outlined
-              dense
             >
             </v-text-field>
             <v-textarea
@@ -33,7 +36,6 @@
               :rules="contentRules"
               :counter="100"
               outlined
-              dense
             >
             </v-textarea>
             <v-btn
@@ -52,6 +54,8 @@
 </template>
 
 <script>
+import ContactPageFormAlert from './ContactPageFormAlert.vue'
+
 export default {
   data() {
     return {
@@ -59,6 +63,7 @@ export default {
       email: '',
       content: '',
       valid: true,
+      sent: false,
       nameRules: [
         v => !!v || '名前を入力してください',
         v => v.length <= 10 || '名前は10文字以内で入力してください'
@@ -73,6 +78,7 @@ export default {
       ]
     }
   },
+  components: { ContactPageFormAlert },
   methods: {
     send() {
       const params = {
@@ -88,10 +94,15 @@ export default {
           this.name = '';
           this.email = '';
           this.content = '';
+          this.sent = true
+          setTimeout(this.alertMessageClose, 3000)
         }).catch(error => {
           console.log(error);
         })
       }
+    },
+    alertMessageClose() {
+      this.sent = false;
     }
   }
 }

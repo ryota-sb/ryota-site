@@ -1,0 +1,11 @@
+<template>
+  <div>
+    <v-alert
+      dense
+      text
+      color="#58B55A"
+    >
+      メッセージを送信しました！
+    </v-alert>
+  </div>
+</template>
