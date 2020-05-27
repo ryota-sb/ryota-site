@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  title: 'About'
+  name: 'about-page'
 }
 </script>
 

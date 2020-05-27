@@ -11,6 +11,12 @@
   </nav>
 </template>
 
+<script>
+export default {
+  name: 'header'
+}
+</script>
+
 <style lang="scss">
   $light-skyblue: #7CC6CF;
   $skyblue: #00B6C4;
