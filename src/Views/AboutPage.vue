@@ -22,8 +22,9 @@
   .about-page {
     .about-page-title {
       h1 {
-        color: white;
-        -webkit-text-stroke:1px black
+        font-family: 'Vollkorn', serif;
+        color: black;
+        font-size: 40px;
       }
     }
     img {

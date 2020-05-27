@@ -1,7 +1,7 @@
 <template>
   <div class="top-page">
     <div class="top-page-title">
-      <h1>Welcome to <span>My page</span></h1>
+      <h1>Welcome to <span>Ryota Site.</span></h1>
     </div>
   </div>
 </template>
@@ -13,9 +13,9 @@
     width: 100%;
     .top-page-title {
       h1 {
-        font-size: 60px;
-        color: white;
-        -webkit-text-stroke:1px $skyblue;
+        font-size: 80px;
+        font-family: 'Vollkorn', serif;
+        color: $skyblue;
       }
     }
   }

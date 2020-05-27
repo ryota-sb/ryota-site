@@ -132,8 +132,9 @@ export default {
     width:  500px;
     .portfolio-page-title {
       h1 {
-        color: white;
-        -webkit-text-stroke: 1px black;
+        font-family: 'Vollkorn', serif;
+        color: black;
+        font-size: 40px;
       }
       p {
         margin-bottom: 30px;

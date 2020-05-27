@@ -64,8 +64,9 @@
     .skill-page-title {
       margin-bottom: 20px;
       h1 {
-        color: white;
-        -webkit-text-stroke: 1px black;
+        font-family: 'Vollkorn', serif;
+        color: black;
+        font-size: 40px;
       }
     }
     .skill-index {

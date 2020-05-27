@@ -1,15 +1,28 @@
 <template>
   <nav>
     <ul>
-      <li><router-link to="/">Top</router-link></li>
-      <li></li>
-      <li><router-link to="/about">About</router-link></li>
-      <li><router-link to="/skill">Skill</router-link></li>
-      <li><router-link to="/portfolio">Portfolio</router-link></li>
-      <li><router-link to="/contact">Contact</router-link></li>
+      <li v-for="page in pages" :key="page.name">
+        <router-link :to="page.link">{{ page.name }}</router-link>
+      </li>
     </ul>
   </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      pages: [
+        { name: 'Top',       link: '/' },
+        { name: 'About',     link: '/about' },
+        { name: 'Skill',     link: '/skill' },
+        { name: 'Portfolio', link: '/portfolio' },
+        { name: 'Contact',   link: '/contact' },
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="scss">
   $light-skyblue: #7CC6CF;
@@ -30,6 +43,7 @@
           height: 50px;
           text-decoration: none;
           font-weight: bold;
+          font-family: 'Vollkorn', serif;
           color: white;
           &:hover {
             background-color: $skyblue;
