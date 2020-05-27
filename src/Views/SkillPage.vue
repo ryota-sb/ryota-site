@@ -53,12 +53,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'skill-page'
-}
-</script>
-
 <style lang="scss">
 
   $light-skyblue: #7CC6CF;

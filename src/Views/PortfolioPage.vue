@@ -116,7 +116,6 @@
 
 <script>
 export default {
-  name: 'portfolio-page',
   data() {
     return {
       isActive: 1

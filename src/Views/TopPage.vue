@@ -6,12 +6,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'top-page'
-}
-</script>
-
 <style lang="scss">
   $skyblue: #7CC6CF;
   .top-page {

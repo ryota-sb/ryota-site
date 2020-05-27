@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Header from './components/share/Header'
-import Footer from './components/share/Footer'
+import Header from './components/share/Header.vue'
+import Footer from './components/share/Footer.vue'
 export default {
   components: { Header, Footer }
 }
