@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card flat>
     <v-carousel
       :show-arrows="false"
       height="280px"
@@ -32,12 +32,10 @@ export default {
   data() {
     return {
       pc_items: [
-        { src: require('@/assets/imgs/bookshelf_top_page.png') },
-        { src: require('@/assets/imgs/bookshelf_user_page.png') },
+        { src: require('@/assets/imgs/tasknotify/task_notify_top_page.png') },
       ],
       mobile_items: [
-        { src: require('@/assets/imgs/bookshelf_top_page_mobile.png') },
-        { src: require('@/assets/imgs/bookshelf_user_page_mobile.png') },
+        { src: require('@/assets/imgs/tasknotify/task_notify_top_page_mobile.png') },
       ]
     }
   }

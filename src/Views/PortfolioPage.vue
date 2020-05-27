@@ -10,7 +10,7 @@
 
       <!-- 画像 -->
       <div class="bookshelf_image">
-        <portfolio-page-image />
+        <portfolio-page-book-shelf-image />
       </div>
 
       <!-- アプリ概要 -->
@@ -56,14 +56,13 @@
       </div>
 
       <!-- Appリンク -->
-      <a href="http://app-bookshelf.site">BookShelfへ</a>
+      <div class="a" >BookShelf準備中</div>
     </div>
 
     <!-- Ryota Site -->
     <div class="ryota-site">
-      <div class="app-image-pc">
-      </div>
-      <div class="app-image-mobile">
+      <div class="ryotasite-image">
+        <portfolio-page-my-site-image />
       </div>
       <div class="app-description">
         <h2>概要</h2>
@@ -75,6 +74,9 @@
             このような実装にしてみました。
           </p>
           <p>
+            お問い合わせフォームは、Vuetifyを使用。
+          </p>
+          <p>
             API Gateway + Lambda + SES で実装しています。
           </p>
         </div>
@@ -82,20 +84,54 @@
       <div class="use-language">
         <h2>使用言語・環境</h2>
         <ul>
-          <li>・HTML&CSS</li>
           <li>・Vue.js</li>
-          <li>・AWS(Amplify)</li>
+          <li>・AWS(Amplify, Lambda, API Gateway, SES)</li>
         </ul>
       </div>
+
+      <!-- Appリンク -->
+      <a href="https://ryota-site.work">RyotaSite</a>
     </div>
 
+    <!-- Task Notify -->
+    <div class="task-notify">
+      <div class="tasknotify-image">
+        <portfolio-page-task-notify-image />
+      </div>
+      <div class="app-description">
+        <h2>概要</h2>
+        <div class="text-box">
+          <p>
+            登録したタスクをLineで通知してくれるアプリです。
+          </p>
+        </div>
+      </div>
+      <div class="use-language">
+        <h2>使用言語・環境</h2>
+        <ul>
+          <li>・Ruby on Rails</li>
+          <li>・Vue.js</li>
+          <li>・Heroku</li>
+        </ul>
+      </div>
+
+      <!-- Appリンク -->
+      <div class="a">TaskNotify準備中</div>
+    </div>
   </div>
 </template>
 
 <script>
-import PortfolioPageImage from '../components/PortfolioPageImage.vue'
+import PortfolioPageBookShelfImage from '../components/PortfolioPageBookShelfImage.vue'
+import PortfolioPageMySiteImage from '../components/PortfolioPageMySiteImage.vue'
+import PortfolioPageTaskNotifyImage from '../components/PortfolioPageTaskNotifyImage.vue'
+
 export default {
-  components: { PortfolioPageImage }
+  components: { 
+    PortfolioPageBookShelfImage,
+    PortfolioPageMySiteImage,
+    PortfolioPageTaskNotifyImage
+  }
 }
 </script>
 
@@ -116,14 +152,18 @@ export default {
       }
     }
     .bookshelf,
-    .ryota-site {
-      .bookshelf_image {
+    .ryota-site,
+    .task-notify {
+      margin-bottom: 30px;
+      .bookshelf_image,
+      .ryotasite-image,
+      .tasknotify-image {
         margin: 20px 0;
       }
       .mobile {
         display: none;
       }
-      a {
+      a, .a {
         margin: 10px auto;
         padding: 5px;
         width: 200px;
@@ -160,8 +200,11 @@ export default {
     .portfolio-page {
       width: auto;
       .bookshelf,
-      .ryota-site {
-        .bookshelf_image {
+      .ryota-site,
+      .task-notify {
+        .bookshelf_image,
+        .ryotasite-image,
+        .tasknotify-image {
           margin: 20px;
         }
         .pc {
