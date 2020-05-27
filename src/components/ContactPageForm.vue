@@ -95,6 +95,7 @@ export default {
           this.email = '';
           this.content = '';
           this.sent = true
+          this.$refs.valid_form.resetValidation()
           setTimeout(this.alertMessageClose, 3000)
         }).catch(error => {
           console.log(error);
