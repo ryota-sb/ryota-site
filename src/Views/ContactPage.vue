@@ -10,10 +10,14 @@
       <textarea v-model="content" placeholder="お問い合わせ内容"></textarea>
       <input type="button" value="送信" v-on:click="send">
     </form>
+    <div>
+      <contact-page-form />
+    </div>
   </div>
 </template>
 
 <script>
+import ContactPageForm from '../components/ContactPageForm.vue'
 export default {
   data() {
     return {
@@ -22,6 +26,7 @@ export default {
       content: ''
     }
   },
+  components: { ContactPageForm },
   methods: {
     send() {
       const params = {
@@ -31,9 +36,12 @@ export default {
       }
       const apiUrl = 'https://7rpd3dcicb.execute-api.ap-northeast-1.amazonaws.com/v1/sendmail'
       this.$axios.post(apiUrl, params).then(response => {
-        console.log(response)
+        console.log(response.data);
+        this.name = '';
+        this.email = '';
+        this.content = '';
       }).catch(error => {
-        console.log(error)
+        console.log(error);
       })
     }
   }
