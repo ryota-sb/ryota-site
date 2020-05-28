@@ -35,10 +35,10 @@
           display: block;
           svg {
             margin: 5px;
-            padding: 2px; 
+            padding: 3px; 
             width: 26px;
             height: 26px;
-            border: 1px solid black;
+            border: 1px solid purple;
             border-radius: 50%;
             color: purple;
             &:hover {
