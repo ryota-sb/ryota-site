@@ -59,7 +59,7 @@
       </div>
 
       <!-- Appリンク -->
-      <div class="a" >BookShelf準備中</div>
+      <a href="http://app-bookshelf.site">BookShelf</a>
     </div>
 
     <!-- Ryota Site -->
