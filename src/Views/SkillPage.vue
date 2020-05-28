@@ -30,6 +30,7 @@
         <ul>
           <li>Ruby on Rails</li>
           <li>Vue.js</li>
+          <li>Vuetify</li>
         </ul>
       </div>
       <div class="group-version-control">
