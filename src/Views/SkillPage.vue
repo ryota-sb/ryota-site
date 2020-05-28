@@ -91,9 +91,6 @@
         }
         ul {
           padding: 10px;
-          //border: 1px solid black;
-          //border-radius: 5px;
-          
           li {
             margin: 20px auto;
             padding: 10px;

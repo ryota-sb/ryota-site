@@ -8,6 +8,10 @@
     <!-- BookShelf -->
     <div class="bookshelf">
 
+      <div class="app-title">
+        <h1>Book Shelf</h1>
+      </div>
+
       <!-- 画像 -->
       <div class="bookshelf_image">
         <portfolio-page-book-shelf-image />
@@ -18,18 +22,17 @@
         <h2>概要</h2>
         <div class="text-box">
           <p>
-            読んだ本を管理、共有するためのアプリケーションです。
+            読んだ本を管理、共有するためのアプリです。
           </p>
           <p>
-            せっかく読んだのに内容を覚えていないという人にお勧めです。
-            また、記録したものは、共有されます。
+            読んだのに内容を覚えていない、忘れてしまう問題を解決する為に作成しました！
           </p>
           <p>
             他の人の本棚も見ることができるので、
             自分が知らない本を見つけるきっかけにもなります。
           </p>
           <p>
-            ぜひ、いろいろな本を読んで知識を増やしてみよう！
+            いろいろな本を読んで知識を増やしてみよう！
           </p>
         </div>
       </div>
@@ -61,26 +64,33 @@
 
     <!-- Ryota Site -->
     <div class="ryota-site">
+
+      <div class="app-title">
+        <h1>Ryota Site</h1>
+      </div>
+
+      <!-- 画像 -->
       <div class="ryotasite-image">
         <portfolio-page-my-site-image />
       </div>
+
+      <!-- アプリ概要 -->
       <div class="app-description">
         <h2>概要</h2>
         <div class="text-box">
           <p>
             私のポートフォリオサイトです。
-            お問い合わせフォームはサーバーレスで動かしています。
-            お問い合わせフォーム以外ではデータのやり取りが特にないので、
-            このような実装にしてみました。
           </p>
           <p>
-            お問い合わせフォームは、Vuetifyを使用。
+            お問い合わせフォームは、Vuetifyを使用しています。
           </p>
           <p>
-            API Gateway + Lambda + SES で実装しています。
+            API Gateway + Lambda + SES でメールの送信を実装しています。
           </p>
         </div>
       </div>
+
+      <!-- 使用言語、環境 -->
       <div class="use-language">
         <h2>使用言語・環境</h2>
         <ul>
@@ -95,9 +105,17 @@
 
     <!-- Task Notify -->
     <div class="task-notify">
+
+      <div class="app-title">
+        <h1>Task Notify</h1>
+      </div>
+
+      <!-- 画像 -->
       <div class="tasknotify-image">
         <portfolio-page-task-notify-image />
       </div>
+
+      <!-- アプリ概要 -->
       <div class="app-description">
         <h2>概要</h2>
         <div class="text-box">
@@ -106,11 +124,25 @@
           </p>
         </div>
       </div>
+
+      <!-- アプリ機能 -->
+      <div class="app-function">
+        <h2>機能</h2>
+        <ul>
+          <li>・タスクの登録、削除</li>
+          <li>・タスクの通知（LINE）</li>
+        </ul>
+      </div>
+
+      <!-- 使用言語、環境 -->
       <div class="use-language">
         <h2>使用言語・環境</h2>
         <ul>
           <li>・Ruby on Rails</li>
           <li>・Vue.js</li>
+          <li>・Vuex</li>
+          <li>・Vuetify</li>
+          <li>・LINE Message API</li>
           <li>・Heroku</li>
         </ul>
       </div>
@@ -154,7 +186,16 @@ export default {
     .bookshelf,
     .ryota-site,
     .task-notify {
-      margin-bottom: 30px;
+      margin-bottom: 70px;
+      .app-title {
+        h1 {
+          padding: 10px;
+          border-top: 1px solid $light-skyblue;
+          border-right: 1px solid $light-skyblue;
+          border-left: 10px solid $light-skyblue;
+          border-bottom: 1px solid $light-skyblue;
+        }
+      }
       .bookshelf_image,
       .ryotasite-image,
       .tasknotify-image {
@@ -202,6 +243,9 @@ export default {
       .bookshelf,
       .ryota-site,
       .task-notify {
+        .app-title {
+          margin: 0 20px;
+        }
         .bookshelf_image,
         .ryotasite-image,
         .tasknotify-image {

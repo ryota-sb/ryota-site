@@ -1,5 +1,5 @@
 <template>
-  <v-card flat>
+  <v-card>
     <v-carousel
       :show-arrows="false"
       height="280px"
