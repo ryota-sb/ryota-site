@@ -54,7 +54,8 @@
         <ul>
           <li>・Ruby</li>
           <li>・Ruby on Rails</li>
-          <li>・AWS(EC2) + Nginx + Unicorn</li>
+          <li>・EC2 + Nginx + Unicorn</li>
+          <li>・Route53（独自ドメイン）</li>
         </ul>
       </div>
 
@@ -159,6 +160,7 @@ import PortfolioPageMySiteImage from '../components/PortfolioPageMySiteImage.vue
 import PortfolioPageTaskNotifyImage from '../components/PortfolioPageTaskNotifyImage.vue'
 
 export default {
+  title: 'Portfolio',
   components: { 
     PortfolioPageBookShelfImage,
     PortfolioPageMySiteImage,
@@ -190,10 +192,19 @@ export default {
       .app-title {
         h1 {
           padding: 10px;
-          border-top: 1px solid $light-skyblue;
-          border-right: 1px solid $light-skyblue;
-          border-left: 10px solid $light-skyblue;
-          border-bottom: 1px solid $light-skyblue;
+          position: relative;
+        }
+        h1:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: 5px;
+          display: inline-block;
+          width: 70px;
+          height: 3px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background-color: purple;
         }
       }
       .bookshelf_image,

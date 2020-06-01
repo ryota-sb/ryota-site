@@ -48,11 +48,20 @@
         <ul>
           <li>EC2</li>
           <li>Amplify</li>
+          <li>API Gateway</li>
+          <li>Lambda</li>
+          <li>SES</li>
         </ul>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  title: 'Skill'
+}
+</script>
 
 <style lang="scss">
 

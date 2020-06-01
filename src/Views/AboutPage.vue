@@ -1,25 +1,139 @@
 <template>
   <div class="about-page">
+
+    <!-- ページタイトル -->
     <div class="about-page-title">
       <h1>About Me</h1>
       <p>- 自己紹介 -</p>
     </div>
-    <img src="@/assets/ryota.jpg" alt="Ryotaの写真" width="150px" height="150px" />
-    <p class="full-name">松井 亮太(25)</p>
-    <div class="about-me">
-      <p>1994年12月6日生まれ。</p>
-      <p>静岡産業大学情報学部を卒業。</p>
-      <p>パソコン一台でサービスやプロダクトを作ることができるプログラミングに興味をもち、未経験から独学で学習を開始。</p>
-      <p>現在は、Webエンジニア転職を目指してRubyとRuby on Railsをメインに勉強中。</p>
-      <p>自分の限界を決めずにコツコツと継続、努力する自信があります！</p>
-      <p>趣味は、スノーボードと遠出すること！</p>
-      <p>制作物は、<router-link to="/portfolio"><span>こちら！</span></router-link></p>
+
+    <div class="introduction">
+
+      <!-- 自分の写真 -->
+      <div class="my-image">
+        <img src="@/assets/ryota.jpg" alt="Ryotaの写真" width="150px" height="150px">
+      </div>
+
+      <!-- 自分の情報 -->
+      <div class="info">
+        <div class="my-info">
+          <p>名前: 松井亮太(25)</p>
+          <p>生年月日: 1994/12/6</p>
+          <p>学歴: 静岡産業大学情報学部 卒業</p>
+        </div>
+      </div>
+
+      <!-- 自分について -->
+      <div class="about-me">
+        <div class="programming-trigger">
+          <h2>プログラミングを始めた理由</h2>
+          <h3>1. 価値を生み出せる。</h3>
+          <div class="text-box">
+            <p>
+              世の中には、いろいろな便利なサービスが増えてきています。
+              最近はその多くがITによるものです。
+            </p>
+            <p>
+              自分もその技術を使って、価値を提供する側になってみたいという思いがあり、
+              まずは、自分で触ってみようということで学習を始めました。
+            </p>
+            <p>
+              また、技術の変化も激しいため、常に学習するという姿勢が必要です。
+              今後も新しいことを柔軟に取り入れていけるような姿勢で頑張ります！
+            </p>
+          </div>
+          <h3>2. 楽しそうだった。</h3>
+          <div class="text-box">
+            <p>単純に楽しそうだと思ったからです。
+              自分のアイデアで動くものが作れるのは、
+              とても魅力を感じました。
+            </p>
+            <p> 
+              最初は、progateでプログラムを書きましたが、
+              実際に表示されたり、動いたりしたときは、とても嬉しかったです！
+            </p>
+            <p>
+              また、うまくいかなかった時も数多くありました。
+              しかし、解決できた時はとても達成感があり、やりがいがあるし、
+              やっていて楽しいと感じました！
+            </p>
+          </div>
+          <h3>3. 汎用性が高い</h3>
+          <div class="text-box">
+            <p>
+              ある会社だけのスキルではなく、共通のスキルだからです。
+            </p>
+            <p>
+              プログラミングスキルは、
+              今後も数多くの場所で必要とされていくと思います。
+              需要が増えていく中で、自分自身もそのスキルを身に着けて、
+              誰かの役にたてたらいいなと思い、始めてみました。
+            </p>
+            <p>
+              汎用性の高いスキルではありますが、挫折率がとても高いと言われているスキルでもあります。
+              それを見た時、チャンスだと思いましたし、
+              挑戦してみたいなという気持ちになりました。
+            </p>
+            <p>
+              また、自分の強みである継続力も活かしていけると思いました。
+            </p>
+          </div>
+        </div>
+
+        <div class="hobby">
+          <h2>趣味・特技</h2>
+          <h3>1. スノーボード</h3>
+          <div class="text-box">
+            <p>
+              楽しそうだと思って始めてみました！
+              初めていってその日に怪我をしてしまいましたが、
+              現在も続けています！
+            </p>
+            <p>
+              実際に滑ってる人や動画などを見て、滑れるようにはなりました！
+              現在は、トリックに挑戦しています！
+            </p>
+          </div>
+          <h3>2. 読書</h3>
+          <div class="text-box">
+            <p>
+              1年前まで全く読書をせず、読書が嫌いでした。
+            </p>
+            <p>
+              しかし、最近は読書が楽しくなり、少しづつですが読むようになりました。
+              いろいろな人の考え方や価値観が書かれているので、
+              考える機会にもなり、楽しみながら読んでます。
+            </p>
+            <p>
+              また、読書の楽しさを知ってほしかったので、
+              読んだ本の内容を共有できるサービスを作りました。
+            </p>
+            <p>
+              最近は、Kindle Paperwhiteで読書してますが、
+              目が疲れないのでオススメです！
+            </p>
+          </div>
+        </div>
+        <p>制作物は、<router-link to="/portfolio"><span>こちら!!</span></router-link></p>
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'about-page'
+}
+</script>
+
 <style lang="scss">
+
+  $light-skyblue: #7CC6CF;
+  $skyblue: #00B6C4;
+
   .about-page {
+    width: 500px;
+    margin: 0 auto;
     .about-page-title {
       h1 {
         font-family: 'Vollkorn', serif;
@@ -27,39 +141,94 @@
         font-size: 40px;
       }
     }
-    img {
+    .introduction {
       margin: 20px 0;
-      border-radius: 50%;
-    }
-    .full-name {
-      margin-bottom: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .about-me {
-      p {
-        padding-bottom: 10px;
-        a {
-          padding: 0 5px;
-          text-decoration: none;
-          color: red;
-          &:hover {
-            background: red;
-            border-radius: 5px;
-            color: white;
+      .my-image {
+        position: relative;
+        text-align: left;
+        z-index: 10;
+        img {
+          border-radius: 3px;
+        }
+      }
+      .info {
+        position: relative;
+        top: -120px;
+        left: 30px;
+        width: 450px;
+        height: 150px;
+        text-align: left;
+        background-color: rgb(240,240,240);
+        border-radius: 3px;
+        z-index: 1;
+        .my-info {
+          margin: 20px 10px;
+          position: absolute;
+          top: 0;
+          left: 130px;
+          font-family: serif;
+        }
+      }
+      .about-me {
+        position: relative;
+        top: -100px;
+        .strength,
+        .programming-trigger,
+        .hobby {
+          margin-bottom: 20px;
+          text-align: left;
+          h2 {
+            padding: 10px;
+            border-left: 10px solid $light-skyblue;
+            border-bottom: 1px solid $light-skyblue;
+            font-size: 22px;
           }
+          h3 {
+            margin: 20px 0 5px;
+          }
+          .text-box {
+            padding: 10px;
+            background-color: rgb(240,240,240);
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            p {
+              //text-indent: 1em;
+              padding: 10px;
+              line-height: 1.7em;
+            }
+          }
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      span {
+        padding: 5px 10px;
+        border: 1px solid purple;
+        border-radius: 30px;
+        color: purple;
+        &:hover {
+          background-color: purple;
+          color: white;
         }
       }
     }
   }
 
   @media screen and (-webkit-min-device-pixel-ratio:0) and (max-width: 420px) {
-    .about-me {
-      width: 250px;
-      margin: 0 auto;
-      p {
-        text-align: left;
-        font-size: 16px;
+    .about-page {
+      width: auto;
+      margin: 0 20px;
+      .introduction {
+        .info {
+          width: 300px;
+        }
+      }
+      .about-me {
+        p {
+          text-align: left;
+          font-size: 16px;
+        }
       }
     }
   }

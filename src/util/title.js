@@ -1,9 +1,9 @@
 export default {
-  mounted: function() {
+  mounted() {
     let { title } = this.$options
     if(title) {
       title = typeof title === 'function' ? title.call(this) : title
-      document.title = `${title} - RyotaSite`
+      document.title = `RyotaSite - ${title}`
     }
   }
 }

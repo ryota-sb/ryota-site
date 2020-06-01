@@ -13,6 +13,7 @@
 <script>
 import ContactPageForm from '../components/ContactPageForm.vue'
 export default {
+  title: 'Contact',
   data() {
     return {
       name: '',
