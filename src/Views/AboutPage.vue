@@ -3,7 +3,7 @@
 
     <!-- ページタイトル -->
     <div class="about-page-title">
-      <h1><span>A</span>bout Me</h1>
+      <h1><span>A</span>bout me</h1>
       <p>- 自己紹介 -</p>
     </div>
 
