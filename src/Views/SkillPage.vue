@@ -4,62 +4,41 @@
       <h1>Skill</h1>
       <p>- 言語、技術 -</p>
     </div>
-    <div class="skill-index">
-      <div class="group-frontend">
-        <div class="skill-title">
-          <h2><span>&lt;</span> フロントエンド <span>/</span><span>&gt;</span></h2>
-        </div>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-      </div>
-      <div class="group-backend">
-        <div class="skill-title">
-          <h2><span>&lt;</span> バックエンド <span>/</span><span>&gt;</span></h2>
-        </div>
-        <ul>
-          <li>Ruby</li>
-        </ul>
-      </div>
-      <div class="group-framework">
-        <div class="skill-title">
-          <h2><span>&lt;</span> フレームワーク <span>/</span><span>&gt;</span></h2>
-        </div>
-        <ul>
-          <li>Ruby on Rails</li>
-          <li>Vue.js</li>
-          <li>Vuetify</li>
-        </ul>
-      </div>
-      <div class="group-version-control">
-        <div class="skill-title">
-          <h2><span>&lt;</span> バージョン管理 <span>/</span><span>&gt;</span></h2>
-        </div>
-        <ul>
-          <li>GitHub</li>
-        </ul>
-      </div>
-      <div class="group-aws">
-        <div class="skill-title">
-          <h2><span>&lt;</span> AWS <span>/</span><span>&gt;</span></h2>
-        </div>
-        <ul>
-          <li>EC2</li>
-          <li>Amplify</li>
-          <li>API Gateway</li>
-          <li>Lambda</li>
-          <li>SES</li>
-        </ul>
-      </div>
-    </div>
+
+    <v-row>
+      <v-col
+        v-for="(skill, index) in skills"
+        :key="index"
+        cols="12"
+      >
+        <v-card text--center>
+          <v-card-title>{{ skill.title }}</v-card-title> 
+          <v-card-text
+            v-for="(stack, index) in skill.stacks"
+            :key="index"
+          >
+            <div class="icon">
+              <img class="logo" :src="stack.img" />
+            </div>
+            <div class="name">
+              {{ stack.name }}
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
+import skills from '../data/skill'
 export default {
-  title: 'Skill'
+  title: 'Skill',
+  data () {
+    return {
+      skills: skills
+    }
+  }
 }
 </script>
 
@@ -79,37 +58,19 @@ export default {
         font-size: 40px;
       }
     }
-    .skill-index {
-      position: relative;
-      top: -19px;
-      .group-frontend,
-      .group-backend,
-      .group-framework,
-      .group-version-control,
-      .group-aws {
-        margin-bottom: 10px;
-        .skill-title {
-          display: inline-block;
-          position: relative;
-          top: 19px;
-          background-color: white;
-          h2 {
-            span {
-              color: purple;
-            }
-          }
-        }
-        ul {
-          padding: 10px;
-          li {
-            margin: 20px auto;
-            padding: 10px;
-            width: 150px;
-            border: 1px solid black;
-            border-radius: 50px;
-          }
-        }
+    .icon {
+      margin-right: 10px;
+      width: 80px;
+      display: inline-block;
+      vertical-align: middle;
+      .logo {
+        width: 45px;
+        margin: 0;
       }
+    }
+    .name {
+      display: inline-block;
+      width: 80px;
     }
   }
 
