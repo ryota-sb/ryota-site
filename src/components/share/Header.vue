@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <li v-for="page in pages" :key="page.name">
+      <li v-for="(page, index) in pages" :key="index">
         <router-link :to="page.link">{{ page.name }}</router-link>
       </li>
     </ul>

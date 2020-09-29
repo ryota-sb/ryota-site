@@ -15,7 +15,9 @@ export default {
 <style lang="scss">
 $skyblue: #7CC6CF;
 .top-page {
-  margin-top: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   .top-page-title {
     h1 {
