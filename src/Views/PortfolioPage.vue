@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio-page">
     <div class="portfolio-page-title">
-      <h1>Portfolio</h1>
+      <h1><span>P</span>ortfolio</h1>
       <p>- 制作物 -</p>
     </div>
 
@@ -170,110 +170,113 @@ export default {
 </script>
 
 <style lang="scss">
-  $light-skyblue: #7CC6CF;
-  $skyblue: #00B6C4;
-  .portfolio-page {
-    margin: 0 auto;
-    width:  500px;
-    .portfolio-page-title {
-      h1 {
-        font-family: 'Vollkorn', serif;
-        color: black;
-        font-size: 40px;
-      }
-      p {
-        margin-bottom: 30px;
+$light-skyblue: #7CC6CF;
+$skyblue: #00B6C4;
+.portfolio-page {
+  margin: 0 auto;
+  width:  500px;
+  .portfolio-page-title {
+    h1 {
+      font-family: 'Vollkorn', serif;
+      color: black;
+      font-size: 40px;
+      span {
+        color: purple;
       }
     }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  .bookshelf,
+  .ryota-site,
+  .task-notify {
+    margin-bottom: 70px;
+    .app-title {
+      h1 {
+        padding: 10px;
+        position: relative;
+      }
+      h1:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        display: inline-block;
+        width: 70px;
+        height: 3px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-color: purple;
+      }
+    }
+    .bookshelf_image,
+    .ryotasite-image,
+    .tasknotify-image {
+      margin: 20px 0;
+    }
+    .mobile {
+      display: none;
+    }
+    a, .a {
+      margin: 10px auto;
+      padding: 5px;
+      width: 200px;
+      display: block;
+      border: 1px solid blue;
+      border-radius: 30px;
+      text-decoration: none;
+      color: blue;
+      &:hover {
+        border: 1px solid $light-skyblue;
+        color: $light-skyblue;
+      }
+    }
+    .app-function,
+    .app-description,
+    .use-language {
+      text-align: left;
+      text-indent: 1em;
+      h2 {
+        padding: 10px;
+        border-left: 10px solid $light-skyblue;
+        border-bottom: 1px solid $light-skyblue;
+      }
+      .text-box {
+        margin: 20px 20px;
+      }
+      ul {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .portfolio-page {
+    width: auto;
     .bookshelf,
     .ryota-site,
     .task-notify {
-      margin-bottom: 70px;
       .app-title {
-        h1 {
-          padding: 10px;
-          position: relative;
-        }
-        h1:before {
-          content: '';
-          position: absolute;
-          left: 50%;
-          bottom: 5px;
-          display: inline-block;
-          width: 70px;
-          height: 3px;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          background-color: purple;
-        }
+        margin: 0 20px;
       }
       .bookshelf_image,
       .ryotasite-image,
       .tasknotify-image {
-        margin: 20px 0;
+        margin: 20px;
       }
-      .mobile {
+      .pc {
         display: none;
       }
-      a, .a {
-        margin: 10px auto;
-        padding: 5px;
-        width: 200px;
-        display: block;
-        border: 1px solid blue;
-        border-radius: 30px;
-        text-decoration: none;
-        color: blue;
-        &:hover {
-          border: 1px solid $light-skyblue;
-          color: $light-skyblue;
-        }
+      .mobile {
+        display: inline-block;
       }
       .app-function,
       .app-description,
       .use-language {
-        text-align: left;
-        text-indent: 1em;
-        h2 {
-          padding: 10px;
-          border-left: 10px solid $light-skyblue;
-          border-bottom: 1px solid $light-skyblue;
-        }
-        .text-box {
-          margin: 20px 20px;
-        }
-        ul {
-          margin: 20px 0;
-        }
+        margin: 0 20px;
       }
     }
   }
-  @media screen and (max-width: 420px) {
-    .portfolio-page {
-      width: auto;
-      .bookshelf,
-      .ryota-site,
-      .task-notify {
-        .app-title {
-          margin: 0 20px;
-        }
-        .bookshelf_image,
-        .ryotasite-image,
-        .tasknotify-image {
-          margin: 20px;
-        }
-        .pc {
-          display: none;
-        }
-        .mobile {
-          display: inline-block;
-        }
-        .app-function,
-        .app-description,
-        .use-language {
-          margin: 0 20px;
-        }
-      }
-    }
-  }
+}
 </style>

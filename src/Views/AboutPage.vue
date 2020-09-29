@@ -3,7 +3,7 @@
 
     <!-- ページタイトル -->
     <div class="about-page-title">
-      <h1>About Me</h1>
+      <h1><span>A</span>bout Me</h1>
       <p>- 自己紹介 -</p>
     </div>
 
@@ -103,109 +103,109 @@ export default {
 </script>
 
 <style lang="scss">
-
-  $light-skyblue: #7CC6CF;
-  $skyblue: #00B6C4;
-
-  .about-page {
-    width: 500px;
-    margin: 0 auto;
-    .about-page-title {
-      h1 {
-        font-family: 'Vollkorn', serif;
-        color: black;
-        font-size: 40px;
-      }
-    }
-    .introduction {
-      margin: 20px 0;
-      .my-image {
-        position: relative;
-        text-align: left;
-        z-index: 10;
-        img {
-          border-radius: 3px;
-        }
-      }
-      .info {
-        position: relative;
-        top: -120px;
-        left: 30px;
-        width: 450px;
-        height: 150px;
-        text-align: left;
-        background-color: rgb(240,240,240);
-        border-radius: 3px;
-        z-index: 1;
-        .my-info {
-          margin: 20px 10px;
-          position: absolute;
-          top: 0;
-          left: 130px;
-          font-family: serif;
-        }
-      }
-      .about-me {
-        position: relative;
-        top: -100px;
-        .strength,
-        .programming-trigger,
-        .hobby {
-          margin-bottom: 20px;
-          text-align: left;
-          h2 {
-            padding: 10px;
-            border-left: 10px solid $light-skyblue;
-            border-bottom: 1px solid $light-skyblue;
-            font-size: 22px;
-          }
-          h3 {
-            margin: 20px 0 5px;
-          }
-          .text-box {
-            padding: 10px;
-            background-color: rgb(240,240,240);
-            border-radius: 3px;
-            letter-spacing: 0.5px;
-            p {
-              //text-indent: 1em;
-              padding: 10px;
-              line-height: 1.7em;
-            }
-          }
-        }
-      }
-    }
-    a {
-      text-decoration: none;
+$light-skyblue: #7CC6CF;
+$skyblue: #00B6C4;
+.about-page {
+  width: 500px;
+  margin: 0 auto;
+  .about-page-title {
+    h1 {
+      font-family: 'Vollkorn', serif;
+      color: black;
+      font-size: 40px;
       span {
-        padding: 5px 10px;
-        border: 1px solid purple;
-        border-radius: 30px;
         color: purple;
-        &:hover {
-          background-color: purple;
-          color: white;
+      }
+    }
+  }
+  .introduction {
+    margin: 20px 0;
+    .my-image {
+      position: relative;
+      text-align: left;
+      z-index: 10;
+      img {
+        border-radius: 3px;
+      }
+    }
+    .info {
+      position: relative;
+      top: -120px;
+      left: 30px;
+      width: 450px;
+      height: 150px;
+      text-align: left;
+      background-color: rgb(240,240,240);
+      border-radius: 3px;
+      z-index: 1;
+      .my-info {
+        margin: 20px 10px;
+        position: absolute;
+        top: 0;
+        left: 130px;
+        font-family: serif;
+      }
+    }
+    .about-me {
+      position: relative;
+      top: -100px;
+      .strength,
+      .programming-trigger,
+      .hobby {
+        margin-bottom: 20px;
+        text-align: left;
+        h2 {
+          padding: 10px;
+          border-left: 10px solid $light-skyblue;
+          border-bottom: 1px solid $light-skyblue;
+          font-size: 22px;
+        }
+        h3 {
+          margin: 20px 0 5px;
+        }
+        .text-box {
+          padding: 10px;
+          background-color: rgb(240,240,240);
+          border-radius: 3px;
+          letter-spacing: 0.5px;
+          p {
+            //text-indent: 1em;
+            padding: 10px;
+            line-height: 1.7em;
+          }
         }
       }
     }
   }
-
-  @media screen and (-webkit-min-device-pixel-ratio:0) and (max-width: 420px) {
-    .about-page {
-      width: auto;
-      margin: 0 20px;
-      .introduction {
-        .info {
-          width: 300px;
-        }
-      }
-      .about-me {
-        p {
-          text-align: left;
-          font-size: 16px;
-        }
+  a {
+    text-decoration: none;
+    span {
+      padding: 5px 10px;
+      border: 1px solid purple;
+      border-radius: 30px;
+      color: purple;
+      &:hover {
+        background-color: purple;
+        color: white;
       }
     }
   }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width: 420px) {
+  .about-page {
+    width: auto;
+    margin: 0 20px;
+    .introduction {
+      .info {
+        width: 300px;
+      }
+    }
+    .about-me {
+      p {
+        text-align: left;
+        font-size: 16px;
+      }
+    }
+  }
+}
 </style>
