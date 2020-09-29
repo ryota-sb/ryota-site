@@ -21,6 +21,7 @@ $skyblue: #7CC6CF;
   width: 100%;
   .top-page-title {
     h1 {
+      padding-top: 20vh;
       font-size: 80px;
       font-family: 'Vollkorn', serif;
       color: $skyblue;

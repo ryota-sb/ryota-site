@@ -27,7 +27,7 @@ export default {
   #app {
     display: flex;
     flex-flow: column;
-    height: 100vh;
+    height: 99vh
   }
 
   .main {
