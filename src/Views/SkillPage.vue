@@ -11,7 +11,7 @@
         :key="index"
         cols="12"
       >
-        <v-card text--center>
+        <v-card>
           <v-card-title>{{ skill.title }}</v-card-title> 
           <v-card-text
             v-for="(stack, index) in skill.stacks"
@@ -72,6 +72,9 @@ $skyblue: #00B6C4;
   .name {
     display: inline-block;
     width: 80px;
+  }
+  .v-card {
+    padding-bottom: 16px;
   }
 }
 
