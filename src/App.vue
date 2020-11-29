@@ -21,18 +21,21 @@ export default {
     margin: 0;
     padding: 0;
     list-style: none;
-    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow: hidden;
   }
 
   #app {
     display: flex;
     flex-flow: column;
-    height: 99vh
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
   }
 
   .main {
-    margin: 40px auto;
-    width: 100%;
     text-align: center;
   }
 </style>

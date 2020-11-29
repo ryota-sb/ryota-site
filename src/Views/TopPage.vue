@@ -15,13 +15,16 @@ export default {
 <style lang="scss">
 $skyblue: #7CC6CF;
 .top-page {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 300px;
   .top-page-title {
+    position: absolute;
+    top: 150px;
     h1 {
-      padding-top: 20vh;
       font-size: 80px;
       font-family: 'Vollkorn', serif;
       color: $skyblue;
@@ -31,12 +34,9 @@ $skyblue: #7CC6CF;
 @media screen and (max-width: 420px) {
   .top-page {
     .top-page-title {
-      width: auto;
+      top: 180px;
       h1 {
         font-size: 55px;
-        span {
-          display: block;
-        }
       }
     }
   }

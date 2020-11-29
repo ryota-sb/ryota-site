@@ -110,11 +110,11 @@ footer {
     .footer-inner {
       .triangle-first:before,
       .triangle-first:after {
-        right: 100px;
+        right: 70px;
       }
       .triangle-second:before,
       .triangle-second:after {
-        right: 120px;
+        right: 20px;
       }
     }
   }
