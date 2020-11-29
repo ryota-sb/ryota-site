@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <li v-for="(page, index) in pages" :key="index">
+      <li v-for="(page, i) in pages" :key="i">
         <router-link :to="page.link">{{ page.name }}</router-link>
       </li>
     </ul>
@@ -30,21 +30,20 @@ export default {
   nav {
     height: 50px;
     line-height: 50px;
-    background-color: $light-skyblue;
-    box-shadow: 0 0 2px $skyblue;
     ul {
-      float: right;
+      margin: 0 10px;
+      display: flex;
+      justify-content: flex-end;
       li {
-        float: left;
+        transform: skew(-15deg);
         a {
           display: block;
-          box-sizing: border-box;
           padding: 0 10px;
           height: 50px;
           text-decoration: none;
           font-weight: bold;
           font-family: 'Vollkorn', serif;
-          color: white;
+          color: $light-skyblue;
           &:hover {
             background-color: $skyblue;
             color: white;
