@@ -23,10 +23,6 @@ export default {
     list-style: none;
   }
 
-  html, body {
-    overflow: hidden;
-  }
-
   #app {
     display: flex;
     flex-flow: column;
