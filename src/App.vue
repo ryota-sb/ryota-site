@@ -34,4 +34,11 @@ export default {
   .main {
     text-align: center;
   }
+  
+  // safariのアドレスバーの高さによる高さ崩れ防止
+  @supports (-webkit-touch-collout: none) {
+    .main {
+      height: -webkit-fill-available;
+    }
+  }
 </style>
