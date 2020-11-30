@@ -36,6 +36,7 @@ export default {
       margin: 0 10px;
       li {
         a {
+          position: relative;
           display: block;
           padding: 0 10px;
           height: 100%;
@@ -43,11 +44,22 @@ export default {
           font-weight: bold;
           font-family: 'Vollkorn', serif;
           color: $light-skyblue;
-          &:hover {
-            border-bottom: 2px solid #fff;
-            border-image: linear-gradient(to right, $skyblue 0%, purple 100%);
-            border-image-slice: 1;
-            color: $skyblue;
+          &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 5px;
+            margin-left: -10px;
+            width: 20px;
+            height: 1px;
+            background-color: purple;
+            transform: scale(0, 1);
+            transform-origin: right top;
+            transition: transform .4s;
+          }
+          &:hover:after {
+            transform-origin: left top;
+            transform: scale(1, 1);
           }
         }
       }
