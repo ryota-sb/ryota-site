@@ -4,7 +4,7 @@
       <p>©2020 Ryota.</p>
       <div class="triangle-first"></div>
       <div class="triangle-second"></div>
-      <div class="icons">
+      <!-- <div class="icons">
         <div class="twitter">
           <a href="#">
             <font-awesome-icon :icon="['fab', 'twitter']" />
@@ -15,7 +15,7 @@
             <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
@@ -25,6 +25,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 30px;
   border-top: 1px solid purple;
   .footer-inner {
     margin: 0 10px;

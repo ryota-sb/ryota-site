@@ -31,22 +31,23 @@ export default {
     height: 50px;
     line-height: 50px;
     ul {
-      margin: 0 10px;
       display: flex;
       justify-content: flex-end;
+      margin: 0 10px;
       li {
-        transform: skew(-15deg);
         a {
           display: block;
           padding: 0 10px;
-          height: 50px;
+          height: 100%;
           text-decoration: none;
           font-weight: bold;
           font-family: 'Vollkorn', serif;
           color: $light-skyblue;
           &:hover {
-            background-color: $skyblue;
-            color: white;
+            border-bottom: 2px solid #fff;
+            border-image: linear-gradient(to right, $skyblue 0%, purple 100%);
+            border-image-slice: 1;
+            color: $skyblue;
           }
         }
       }
