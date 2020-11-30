@@ -11,6 +11,8 @@
 <script>
 import Header from './components/share/Header.vue'
 import Footer from './components/share/Footer.vue'
+import "./util/vh"
+
 export default {
   components: { Header, Footer }
 }
@@ -29,6 +31,7 @@ export default {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
   }
 
   .main {
