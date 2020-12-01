@@ -20,10 +20,11 @@ $skyblue: #7CC6CF;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300px;
+  height: 80vh;
   .top-page-title {
-    position: absolute;
-    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     h1 {
       font-size: 80px;
       font-family: 'Vollkorn', serif;

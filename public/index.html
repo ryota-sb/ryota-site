@@ -9,20 +9,5 @@
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      // body読み込み時、一回だけbodyサイズを設定
-      document.body.onload = () => {
-        document.body.style.minHeight = window.innerHeight + 'px';
-      }
-      // リサイズを停止し、500ms後にbodyサイズを設定
-      let timeoutId;
-      window.addEventListener("resize", () => {
-        clearTimeout(timeoutId)
-
-        timeoutId = setTimeout(() => {
-          document.body.style.minHeight = window.innerHeight + 'px';
-        }, 500);
-      });
-    </script>
   </body>
 </html>
