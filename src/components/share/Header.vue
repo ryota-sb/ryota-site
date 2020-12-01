@@ -48,7 +48,7 @@ export default {
             content: '';
             position: absolute;
             left: 50%;
-            bottom: 5px;
+            bottom: 10px;
             margin-left: -10px;
             width: 20px;
             height: 1px;
