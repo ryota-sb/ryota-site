@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import "../util/vh"
+
 export default {
   title: 'Top'
 }
@@ -20,7 +22,8 @@ $skyblue: #7CC6CF;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
+  min-height: calc(var(--vh, 1vh) * 80);
   .top-page-title {
     display: flex;
     justify-content: center;
