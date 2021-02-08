@@ -14,8 +14,8 @@
         <v-card>
           <v-card-title>{{ skill.title }}</v-card-title> 
           <v-card-text
-            v-for="(stack, index) in skill.stacks"
-            :key="index"
+            v-for="(stack, i) in skill.stacks"
+            :key="i"
           >
             <div class="icon">
               <img class="logo" :src="stack.img" />
@@ -46,8 +46,8 @@ export default {
 $light-skyblue: #7CC6CF;
 $skyblue: #00B6C4;
 .skill-page {
+  margin: 0 auto 40px;
   width: 500px;
-  margin: 0 auto;
   .skill-page-title {
     margin-bottom: 20px;
     h1 {

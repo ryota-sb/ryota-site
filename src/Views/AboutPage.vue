@@ -98,7 +98,7 @@
 
 <script>
 export default {
-  name: 'about-page'
+  title: 'About'
 }
 </script>
 
@@ -107,6 +107,7 @@ $light-skyblue: #7CC6CF;
 $skyblue: #00B6C4;
 .about-page {
   width: 500px;
+  height: 100%;
   margin: 0 auto;
   .about-page-title {
     h1 {
