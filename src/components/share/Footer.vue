@@ -4,18 +4,18 @@
       <p>©2020 Ryota.</p>
       <div class="triangle-first"></div>
       <div class="triangle-second"></div>
-      <!-- <div class="icons">
-        <div class="twitter">
+      <div class="icons">
+        <!-- <div class="twitter">
           <a href="#">
             <font-awesome-icon :icon="['fab', 'twitter']" />
           </a>
-        </div>
+        </div> -->
         <div class="github">
           <a href="https://github.com/ryota-sb?tab=repositories">
             <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </div>
-      </div> -->
+      </div>
     </div>
   </footer>
 </template>
