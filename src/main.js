@@ -5,6 +5,7 @@ import titleMixin from './util/title'
 import axios      from 'axios'
 import Vuetify    from 'vuetify'
 import '../node_modules/vuetify/dist/vuetify.min.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
