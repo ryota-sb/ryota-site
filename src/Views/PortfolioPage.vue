@@ -18,7 +18,7 @@
                 :src=item.src
               />
               <v-card-text style="position: relative; padding: 0">
-                <v-btn absolute top right fab :href=item.link>
+                <v-btn absolute top right fab :to=item.link>
                   <v-icon large>mdi-chevron-right</v-icon>
                 </v-btn>
                 <v-card-title v-text="item.title" />
