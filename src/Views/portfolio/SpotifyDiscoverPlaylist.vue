@@ -1,12 +1,7 @@
 <template>
   <div class="spotify-discover-playlist">
     <div class="app-title">
-      <h1>Spotify Discover Playlist</h1>
-    </div>
-
-    <!-- 画像 -->
-    <div class="spotifydiscover-playlist-image">
-      <portfolio-page-book-shelf-image />
+      <h1>Spotify Discover</h1>
     </div>
 
     <!-- アプリ概要 -->
@@ -107,6 +102,7 @@ $skyblue: #00b6c4;
 }
 @media screen and (max-width: 420px) {
   .spotify-discover-playlist {
+    width: auto;
     .app-title {
       margin: 0 20px;
     }

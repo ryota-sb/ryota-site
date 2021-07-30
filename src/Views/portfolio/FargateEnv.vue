@@ -4,11 +4,6 @@
       <h1>Fargate環境構築</h1>
     </div>
 
-    <!-- 画像 -->
-    <div class="fargate-env-image">
-      <portfolio-page-book-shelf-image />
-    </div>
-
     <!-- アプリ概要 -->
     <div class="app-description">
       <h2>概要</h2>
@@ -94,6 +89,7 @@ $skyblue: #00b6c4;
 }
 @media screen and (max-width: 420px) {
   .fargate-env {
+    width: auto;
     .app-title {
       margin: 0 20px;
     }

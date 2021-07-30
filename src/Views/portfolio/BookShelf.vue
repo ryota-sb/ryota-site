@@ -4,11 +4,6 @@
       <h1>Book Shelf</h1>
     </div>
 
-    <!-- 画像 -->
-    <div class="bookshelf-image">
-      <portfolio-page-book-shelf-image />
-    </div>
-
     <!-- アプリ概要 -->
     <div class="app-description">
       <h2>概要</h2>
@@ -117,6 +112,7 @@ $skyblue: #00b6c4;
 }
 @media screen and (max-width: 420px) {
   .bookshelf {
+    width: auto;
     .app-title {
       margin: 0 20px;
     }

@@ -48,7 +48,7 @@ export default {
         },
         {
           src: require("@/assets/imgs/spotifydiscoverplaylist/spotify_discover_playlist.png"),
-          title: "Spotify Discover Playlist",
+          title: "Spotify Discover",
           link: "/portfolio/spotifydiscoverplaylist"
         },
         {

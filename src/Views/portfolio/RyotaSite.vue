@@ -4,11 +4,6 @@
       <h1>Ryota Site</h1>
     </div>
 
-    <!-- 画像 -->
-    <div class="ryotasite-image">
-      <portfolio-page-my-site-image />
-    </div>
-
     <!-- アプリ概要 -->
     <div class="app-description">
       <h2>概要</h2>
@@ -99,6 +94,7 @@ $skyblue: #00b6c4;
 
 @media screen and (max-width: 420px) {
   .ryota-site {
+    width: auto;
     .app-title {
       margin: 0 20px;
     }
