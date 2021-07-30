@@ -1,28 +1,34 @@
 <template>
-  <div class="portfolio-page">
-    <div class="portfolio-page-title">
-      <h1><span>P</span>ortfolio</h1>
-      <p>- 制作物 -</p>
+  <v-container>
+    <div class="portfolio-page">
+      <div class="portfolio-page-title">
+        <h1><span>P</span>ortfolio</h1>
+        <p>- 制作物 -</p>
+      </div>
+      <v-row justify="center">
+        <template v-for="(item, i) in items">
+          <v-col
+            :key=i
+            cols="12"
+            sm="6"
+            md="4"
+          >
+            <v-card>
+              <v-img 
+                :src=item.src
+              />
+              <v-card-text style="position: relative; padding: 0">
+                <v-btn absolute top right fab :href=item.link>
+                  <v-icon large>mdi-chevron-right</v-icon>
+                </v-btn>
+                <v-card-title v-text="item.title" />
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </template>
+      </v-row>
     </div>
-    <v-row>
-      <v-col
-        v-for="(item, i) in items"
-        :key=i
-      >
-        <v-card>
-          <v-img 
-            :src=item.src
-          />
-          <v-btn absolute bottom right fab :href=item.link>
-            <v-icon large>mdi-chevron-right</v-icon>
-          </v-btn>
-        </v-card>
-        <v-card>
-          <v-card-title>{{ item.title }}</v-card-title>
-        </v-card>
-      </v-col>
-    </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -60,8 +66,7 @@ export default {
 $light-skyblue: #7cc6cf;
 $skyblue: #00b6c4;
 .portfolio-page {
-  margin: 0 auto 70px;
-  width: 500px;
+  margin-bottom: 70px;
   .portfolio-page-title {
     h1 {
       font-family: "Vollkorn", serif;
